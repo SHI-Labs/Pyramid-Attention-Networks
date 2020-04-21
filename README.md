@@ -19,18 +19,22 @@ Self-similarity refers to the image prior widely used in image restoration algor
 ### Color Image Denoising 
 ![PSNR_DN_RGB](/Figs/PSNR_DN_RGB.png)
 ![Visual_DN_RGB](/Figs/Visual_DN_RGB.png)
+
 More details at [DN_RGB](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/DN_RGB).
 ### Image Demosaicing 
 ![PSNR_Demosaic](/Figs/PSNR_Demosaic.png)
 ![Visual_Demosaic](/Figs/Visual_Demosaic.png)
+
 More details at [Demosaic](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/Demosaic).
 ### Image Compression Artifact Reduction 
 ![PSNR_CAR](/Figs/PSNR_CAR.png)
 ![Visual_CAR](/Figs/Visual_CAR.png)
+
 More details at [CAR](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/CAR).
 ### Image Super-resolution 
 ![PSNR_SR](/Figs/PSNR_SR.PNG)
 ![Visual_SR](/Figs/Visual_SR.PNG)
+
 More details at [SR](https://github.com/yulunzhang/RNAN/tree/master/SR).
 
 ## Citation
