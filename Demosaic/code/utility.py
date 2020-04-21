@@ -152,7 +152,7 @@ class checkpoint():
                 '{}_x{}_'.format(filename, scale)
             )
 
-            postfix = ('SR', 'LR', 'HR')
+            postfix = ('DM', 'LQ', 'HQ')
             for v, p in zip(save_list, postfix):
                 normalized = v[0].mul(255 / self.args.rgb_range)
                 tensor_cpu = normalized.byte().permute(1, 2, 0).cpu()
