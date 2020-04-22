@@ -17,7 +17,24 @@ The code is built on [EDSR (PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorc
 
 1. Download DIV2K training data (800 training + 100 validtion images) from [DIV2K dataset](https://data.vision.ee.ethz.ch/cvl/DIV2K/) or [SNU_CVLab](https://cv.snu.ac.kr/research/EDSR/DIV2K.tar).
 
-2. Specify '--dir_data' based on the HR and LR images path.
+2. Specify '--dir_data' in optional.py based on the HR and LR images path.
+
+3. Organize training data like:
+```bash
+DIV2K/
+├── DIV2K_train_HR
+├── DIV2K_train_LR_bicubic
+│   └── X10
+│   └── X30
+│   └── X50
+│   └── X70
+├── DIV2K_valid_HR
+└── DIV2K_valid_LR_bicubic
+    └── X10
+    └── X30
+    └── X50
+    └── X70
+```
 
 For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorch).
 
@@ -31,8 +48,7 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
 
     ```bash
     # Example Usage: N=10
-    python main.py --n_GPUs 1 --decay 200-400-600-800 --model EDSR --scale 10 --save PANET_DN_RGB_N10 --patch_size 48 --save_models --chop
-
+    python main.py --n_GPUs 1 --lr 1e-4  --batch_size 16  --n_resblocks 80 --save_models --epoch 1000 --decay 200-400-600-800 --model PANET --scale 50 --patch_size 48 --reset --save PANET_N50 --n_feats 64 --data_train DIV2K --chop
     ```
 ## Test
 ### Quick start
@@ -44,13 +60,21 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
     ```bash
     # No self-ensemble, use different testsets to reproduce the results in the paper.
     # Example Usage: 
-    python main.py --model EDSR --data_test Urban100 --scale 10 --save_results --chop --test_only  --pre_train ../path_to_model --testpath
+    python main.py --model PANET --n_resblocks 80 --n_feats 64 --data_test Urban100 --scale 10 --save_results --chop --test_only  --pre_train ../path_to_model
     ```
 
 ### The whole test pipeline
-1. Prepare test data.
-
-2. Conduct image CAR. 
+1. Prepare test data. Organize training data like:
+```bash
+benchmark/
+├── testset1
+│   └── HR 
+│   └── LR_bicubic
+│   	└── X10
+│   	└── ..
+├── testset2
+```
+2. Conduct image denoise. 
 
     See **Quick start**
 3. Evaluate the results.

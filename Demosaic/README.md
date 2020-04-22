@@ -19,6 +19,16 @@ The code is built on [EDSR (PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorc
 
 2. Specify '--dir_data' based on the HR and LR images path.
 
+3. Organize training data like:
+```bash
+DIV2K/
+├── DIV2K_train_HR
+├── DIV2K_train_LR_bicubic
+│   └── X1
+├── DIV2K_valid_HR
+└── DIV2K_valid_LR_bicubic
+    └── X1
+```
 For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorch).
 
 ### Begin to train
@@ -31,7 +41,8 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
 
     ```bash
     # Example Usage: 
-    python main.py --n_GPUs 1 --decay 200-400-600-800 --model EDSR --scale 10 --save PANET_DEMOSAIC --patch_size 48 --save_models --chop
+    python main.py --n_GPUs 1 --lr 1e-4 --decay 200-400-600-800 --epoch 1000 --batch_size 16 --n_resblocks 80 --save_models --model PANET --scale 1 --patch_size 48 --save PANET_DEMOSAIC --n_feats 64 --data_train DIV2K --chop
+
 
     ```
 ## Test
@@ -44,11 +55,21 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
     ```bash
     # No self-ensemble, use different testsets to reproduce the results in the paper.
     # Example Usage: 
-    python main.py --model EDSR --data_test Urban100 --scale 10 --save_results --chop --test_only  --pre_train ../path_to_model --testpath
+    python main.py --model PANET --save_results --n_GPUs 1 --chop --n_resblocks 80 --n_feats 64 --data_test McM+Kodak24+CBSD68+Urban100 --scale 1 --pre_train ../model_best.pt --test_only
     ```
 
 ### The whole test pipeline
-1. Prepare test data.
+1. Prepare test data. Organize training data like:
+```bash
+benchmark/
+├── testset1
+│   └── HR 
+│   └── LR_bicubic
+│   	└── X1
+│   	└── ..
+├── testset2
+```
+
 
 2. Conduct image CAR. 
 
