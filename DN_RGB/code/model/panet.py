@@ -3,11 +3,11 @@ from model import attention
 import torch.nn as nn
 
 def make_model(args, parent=False):
-    return EDSR(args)
+    return PANET(args)
 
-class EDSR(nn.Module):
+class PANET(nn.Module):
     def __init__(self, args, conv=common.default_conv):
-        super(EDSR, self).__init__()
+        super(PANET, self).__init__()
 
         n_resblock = args.n_resblocks
         n_feats = args.n_feats
@@ -25,10 +25,10 @@ class EDSR(nn.Module):
         m_body = [
             common.ResBlock(
                 conv, n_feats, kernel_size, nn.PReLU(), res_scale=args.res_scale
-            ) for _ in range(40)
+            ) for _ in range(n_resblocks//2)
         ]
         m_body.append(msa)
-        for i in range(40):
+        for i in range(n_resblocks//2):
             m_body.append(common.ResBlock(conv,n_feats,kernel_size,nn.PReLU(),res_scale=args.res_scale))
       
         m_body.append(conv(n_feats, n_feats, kernel_size))
