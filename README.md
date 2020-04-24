@@ -3,7 +3,7 @@ This repository is for PANet and PA-EDSR introduced in the following paper
 
 [Yiqun Mei](http://yiqunm2.web.illinois.edu/), [Yuchen Fan](https://scholar.google.com/citations?user=BlfdYL0AAAAJ&hl=en), [Yulun Zhang](http://yulunzhang.com/), [Jiahui Yu](https://jiahuiyu.com/), [Yuqian Zhou](https://yzhouas.github.io/), [Ding Liu](https://scholar.google.com/citations?user=PGtHUI0AAAAJ&hl=en), [Thomas S. Huang](http://ifp-uiuc.github.io/) and [Honghui Shi](https://www.humphreyshi.com/) "Pyramid Attention for Image Restoration", [[Arxiv]](https://temp) 
 
-The code is built on [EDSR (PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorch) and tested on Ubuntu 18.04 environment (Python3.6, PyTorch_1.1) with Titan X/1080Ti/V100 GPUs.
+The code is built on [EDSR (PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorch) & [RNAN](https://github.com/yulunzhang/RNAN) and tested on Ubuntu 18.04 environment (Python3.6, PyTorch_1.1) with Titan X/1080Ti/V100 GPUs.
 
 ## Contents
 1. [Introduction](#Introduction)
@@ -32,10 +32,10 @@ More details at [Demosaic](https://github.com/HarukiYqM/PANet-PyTorch/tree/maste
 
 More details at [CAR](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/CAR).
 ### Image Super-resolution 
-![PSNR_SR](/Figs/PSNR_SR.PNG)
-![Visual_SR](/Figs/Visual_SR.PNG)
+![PSNR_SR](/Figs/PSNR_SR.png)
+![Visual_SR](/Figs/Visual_SR.png)
 
-More details at [SR](https://github.com/yulunzhang/RNAN/tree/master/SR).
+More details at [SR](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/SR).
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
