@@ -1,0 +1,5 @@
+#!/bin/bash
+#Train x2
+python main.py --n_GPUs 4 --rgb_range 1 --reset --save_models --lr 1e-4 --decay 200-400-600-800 --chop --save_results --n_resblocks 32 --n_feats 256 --res_scale 0.1 --batch_size 16 --model PAEDSR --scale 2 --patch_size 96 --save EDSR_PA_x2 --data_train DIV2K
+#Test
+python main.py --model PAEDSR --data_test Set5+Set14+B100+Urban100 --save_results --rgb_range 1 --data_range 801-900 --scale 2 --n_feats 256 --n_resblocks 32 --res_scale 0.1 --pre_train ../model_x2.pt --test_only --chop 
