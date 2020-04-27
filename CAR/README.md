@@ -39,7 +39,7 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
 
 ### Begin to train
 
-1. (optional) All the pretrained models can be downloaded from [Google Drive](https://drive.google.com/open?id=1q9iUzqYX0fVRzDu4J6fvSPRosgOZoJJE).
+1. (optional) All the pretrained models and visual results can be downloaded from [Google Drive](https://drive.google.com/open?id=1q9iUzqYX0fVRzDu4J6fvSPRosgOZoJJE).
 
 2. Cd to 'PANet-PyTorch/[Task]/code', run the following scripts to train models.
 
