@@ -20,22 +20,22 @@ Self-similarity refers to the image prior widely used in image restoration algor
 ![PSNR_DN_RGB](/Figs/PSNR_DN_RGB.png)
 ![Visual_DN_RGB](/Figs/Visual_DN_RGB.png)
 
-More details at [DN_RGB](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/DN_RGB).
+More details at [DN_RGB](https://github.com/SHI-Labs/Pyramid-Attention-Networks/tree/master/DN_RGB).
 ### Image Demosaicing 
 ![PSNR_Demosaic](/Figs/PSNR_Demosaic.png)
 ![Visual_Demosaic](/Figs/Visual_Demosaic.png)
 
-More details at [Demosaic](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/Demosaic).
+More details at [Demosaic](https://github.com/SHI-Labs/Pyramid-Attention-Networks/tree/master/Demosaic).
 ### Image Compression Artifact Reduction 
 ![PSNR_CAR](/Figs/PSNR_CAR.png)
 ![Visual_CAR](/Figs/Visual_CAR.png)
 
-More details at [CAR](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/CAR).
+More details at [CAR](https://github.com/SHI-Labs/Pyramid-Attention-Networks/tree/master/CAR).
 ### Image Super-resolution 
 ![PSNR_SR](/Figs/PSNR_SR.png)
 ![Visual_SR](/Figs/Visual_SR.png)
 
-More details at [SR](https://github.com/HarukiYqM/PANet-PyTorch/tree/master/SR).
+More details at [SR](https://github.com/SHI-Labs/Pyramid-Attention-Networks/tree/master/SR).
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
