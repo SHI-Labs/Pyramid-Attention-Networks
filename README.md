@@ -40,6 +40,12 @@ More details at [SR](https://github.com/SHI-Labs/Pyramid-Attention-Networks/tree
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
 ```
+@article{mei2020pyramid,
+  title={Pyramid Attention Networks for Image Restoration},
+  author={Mei, Yiqun and Fan, Yuchen and Zhang, Yulun and Yu, Jiahui and Zhou, Yuqian and Liu, Ding and Fu, Yun and Huang, Thomas S and Shi, Honghui},
+  journal={arXiv preprint arXiv:2004.13824},
+  year={2020}
+}
 @InProceedings{Lim_2017_CVPR_Workshops,
   author = {Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Lee, Kyoung Mu},
   title = {Enhanced Deep Residual Networks for Single Image Super-Resolution},
