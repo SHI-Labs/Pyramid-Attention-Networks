@@ -9,7 +9,7 @@ class PANET(nn.Module):
     def __init__(self, args, conv=common.default_conv):
         super(PANET, self).__init__()
 
-        n_resblock = args.n_resblocks
+        n_resblocks = args.n_resblocks
         n_feats = args.n_feats
         kernel_size = 3 
         scale = args.scale[0]
