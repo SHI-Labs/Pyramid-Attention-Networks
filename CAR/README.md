@@ -47,7 +47,7 @@ For more informaiton, please refer to [EDSR(PyTorch)](https://github.com/thstkdg
 
     ```bash
     # Example Usage: Q=10 
-    python main.py --n_GPUs 2 --batch_size 16 --lr 1e-4 --decay 200-400-600-800 ---save_models --n_resblocks 80 --model PANET --scale 10 --patch_size 48 --save PANET_Q10 --n_feats 64 --data_train DIV2K --chop
+    python main.py --n_GPUs 2 --batch_size 16 --lr 1e-4 --decay 200-400-600-800 --save_models --n_resblocks 80 --model PANET --scale 10 --patch_size 48 --save PANET_Q10 --n_feats 64 --data_train DIV2K --chop
     ```
 ## Test
 ### Quick start
